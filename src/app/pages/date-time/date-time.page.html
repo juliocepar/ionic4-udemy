@@ -2,11 +2,11 @@
 
 <ion-content>
   <ion-list>
-    
+
     <ion-list-header>
       <ion-label>Datos de nacimiento</ion-label>
     </ion-list-header>
-    
+
     <ion-item>
       <ion-label>Fecha de nacimiento</ion-label>
       <ion-datetime placeholder="Nacimiento"
@@ -15,7 +15,37 @@
                     cancelText="Cancelar"
                     doneText="Listo"
                     (ionChange)="cambioFecha($event)">
-    </ion-datetime>
+      </ion-datetime>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Mín. y máx.</ion-label>
+      <ion-datetime placeholder="yyyy-mm-dd"
+                    displayFormat="YYYY MMMM DD"
+                    min="2015-01-01"
+                    max="2015-12-31">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Años</ion-label>
+      <ion-datetime placeholder="YYYY"
+                    displayFormat="YYYY"
+                    min="2015"
+                    max="2025"
+                    value="2020">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Años</ion-label>
+      <ion-datetime [pickerOptions]="customPickerOptions"
+                    [(ngModel)]="customDate">
+      </ion-datetime>
     </ion-item>
 
   </ion-list>
