@@ -1,7 +1,7 @@
 <app-header titulo="Grid - Rows"></app-header>
 
-<ion-content padding>
-  <ion-grid>
+<ion-content padding fullscreen>
+  <ion-grid fixed>
 
     <!-- <ion-row>
       <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
@@ -10,7 +10,8 @@
     </ion-row> -->
 
     <ion-row>
-      <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]">
+      <ion-col sizeLg="3" sizeMd="4" sizeSm="6" sizeXs="12"
+               *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]">
         
         <ion-card>
           <ion-img src="/assets/shapes.svg"></ion-img>
